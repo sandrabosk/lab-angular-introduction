@@ -1,0 +1,31 @@
+<h1> {{ title }} </h1>
+
+<div class="">
+  <h2> {{ article.title }} </h2>
+  <p> <img class="pic" src="{{ article.url }}" alt=""> </p>
+  <p class="desc"> {{ article.desc }} </p>
+</div>
+
+<h2> Comments</h2>
+<div class="comments" *ngFor="let comment of comments">
+  <p> <span class="madeBy"> {{ comment.madeBy }} </span> <span class="date"> {{ comment.publishedAt }} </span> </p>
+  <div>
+    {{ comment.comment }}
+  </div>
+</div>
+
+<div class="form">
+  <form class="" action="" method="post">
+    <h4> Add your comment </h4>
+    <div>
+      <p> Name: </p>
+      <input type="text" style="width: 100%;">
+    </div>
+    <div>
+      <p> Your comment: </p>
+      <textarea name="name" rows="8" cols="80"></textarea>
+    </div>
+    <button type="button" name="button"> Comment </button>
+
+  </form>
+</div>

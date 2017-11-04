@@ -1,0 +1,16 @@
+<div class="row">
+
+<li class="col-sm-3" style=" margin-left:5%; "  *ngFor="let champion of champions">
+  <h1> {{ champion.year }} </h1>
+  <h2> <strong>{{ champion. champName }} </strong></h2>
+  <p> <img class="camp-photo" src="{{ champion.photo }}" alt=""> </p>
+
+  <h4>Best Players</h4>
+   <ul>
+     <li *ngFor="let player of champion.best_palyers">
+       {{ player }}
+     </li>
+  </ul>
+
+</li>
+</div>
